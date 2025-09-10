@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="font-sans">
@@ -19,12 +21,12 @@ export default function Home() {
         <div className="text-center bg-black/50 p-8 rounded-lg">
           <h2 className="text-5xl font-extrabold mb-6">Your Style, Our Passion</h2>
           <p className="text-lg mb-6">Professional barbers ready to give you the perfect cut.</p>
-          <a
-   href="/reservation"
-  className="bg-yellow-500 text-black px-6 py-3 rounded-md font-semibold hover:bg-yellow-400"
->
-  Reserve Now
-</a>
+          <Link
+            href="/reservation"
+            className="bg-yellow-500 text-black px-6 py-3 rounded-md font-semibold hover:bg-yellow-400"
+          >
+            Reserve Now
+          </Link>
         </div>
       </section>
 
@@ -57,39 +59,43 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <form
-  action="https://formspree.io/f/your-form-id"
-  method="POST"
-  className="max-w-md mx-auto flex flex-col gap-4"
->
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    required
-    className="p-3 rounded-md text-black"
-  />
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    required
-    className="p-3 rounded-md text-black"
-  />
-  <textarea
-    name="message"
-    placeholder="Your Message"
-    rows={4}
-    required
-    className="p-3 rounded-md text-black"
-  />
-  <button
-    type="submit"
-    className="bg-yellow-500 text-black px-6 py-3 rounded-md font-semibold hover:bg-yellow-400"
-  >
-    Send Message
-  </button>
-</form>
+      <section id="contact" className="py-20 px-8 bg-gray-100 text-center">
+        <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
+        <form
+          action="https://formspree.io/f/your-form-id"
+          method="POST"
+          className="max-w-md mx-auto flex flex-col gap-4"
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            className="p-3 rounded-md text-black"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            className="p-3 rounded-md text-black"
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows={4}
+            required
+            className="p-3 rounded-md text-black"
+          />
+          <button
+            type="submit"
+            className="bg-yellow-500 text-black px-6 py-3 rounded-md font-semibold hover:bg-yellow-400"
+          >
+            Send Message
+          </button>
+        </form>
+      </section>
+
       {/* Footer */}
       <footer className="p-6 text-center bg-gray-800 text-gray-400">
         © {new Date().getFullYear()} Classic Cuts. All rights reserved.
