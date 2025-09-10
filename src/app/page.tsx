@@ -20,7 +20,7 @@ export default function Home() {
           <h2 className="text-5xl font-extrabold mb-6">Your Style, Our Passion</h2>
           <p className="text-lg mb-6">Professional barbers ready to give you the perfect cut.</p>
           <a
-  href="/reserve"
+   href="/reservation"
   className="bg-yellow-500 text-black px-6 py-3 rounded-md font-semibold hover:bg-yellow-400"
 >
   Reserve Now
